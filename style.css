@@ -1007,6 +1007,11 @@ section {
   font-size: clamp(0.8rem, 1.4vw, 1rem);
   font-weight: 600;
 }
+@media (max-width: 1000px) {
+  .section-one .price-section .price-container:nth-child(2) .professional-para {
+    width: 30ch;
+  }
+}
 .section-one .price-section .price-container:nth-child(3) {
   width: 100%;
 }

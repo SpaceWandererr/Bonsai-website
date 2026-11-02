@@ -1251,6 +1251,12 @@ section {
           font-size: clamp(0.8rem, 1.4vw, 1rem);
           font-weight: 600;
         }
+
+        @media (max-width : 1000px) {
+          .professional-para{
+            width: 30ch;
+          }
+        }
       }
 
       &:nth-child(3) {
