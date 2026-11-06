@@ -522,11 +522,11 @@ nav {
       }
 
       button {
-        padding: 0.4rem 0.8rem;
+        padding: 0.6rem 1.5rem;
         word-wrap: none;
         text-transform: uppercase;
         white-space: nowrap;
-        font-size: clamp(10px, 1vw + 0.2rem, 1rem);
+        font-size: clamp(10px, 1vw + 0.2rem, 0.8rem);
         transition:
           transform 0.1s ease,
           background-color 0.2s ease;
@@ -543,7 +543,7 @@ nav {
 
         &:first-child {
           color: var(--color-primary);
-          border: 1.5px solid var(--color-primary);
+          border: 1px solid var(--color-primary);
           border-radius: 4px;
           background: transparent;
           font-weight: 700;
@@ -1185,7 +1185,7 @@ section {
 
             .billed-yearly {
               flex: 2;
-              display: block;
+              display: none;
               font-size: clamp(0.8rem, 1vw - 0.2rem, 1rem);
               font-weight: 400;
               text-transform: capitalize;
@@ -1276,12 +1276,13 @@ section {
     }
 
     button {
+      align-self: center;
       font-family: "BonsaiBody";
       background-color: #00b289;
       border: none;
       border-radius: 4px;
       padding: 1rem 1rem;
-      width: 100%;
+      width: 80%;
       margin-top: auto;
       color: #ffffff;
       font-weight: 700;
@@ -1376,17 +1377,17 @@ section {
         gap: 0.2rem;
       }
 
-      box-shadow: 0 0 10px 5px rgba(50, 50, 93, 0.25);
+      box-shadow: 2px 2px 10px 15px rgba(210, 210, 215, 0.25);
 
       div {
         h3 {
-          color: #000;
+          color: #4c525a;
         }
       }
 
       h2 {
-        color: #000;
-        font-size: clamp(1rem, 2vw + 1rem, 2rem);
+        color: #4c525a;
+        font-size: clamp(1rem, 2vw + 1.5rem, 2.85rem);
         text-transform: uppercase;
         white-space: wrap;
 
@@ -1450,6 +1451,113 @@ section {
 
         i {
           font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+// Section three
+
+.section-three {
+  width: 100%;
+  max-width: 1200px;
+  // height: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 4rem;
+  flex-direction: column;
+  background-color: burlywood;
+
+  .section-three-div {
+    width: 100%;
+    max-width: 1000px;
+    // height: 50%;
+    padding: 1rem 4rem;
+    gap: 2rem;
+
+    &:first-child {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      height: min(20rem, 100vh);
+      // padding: 0.8rem;
+      width: 100%;
+      border-radius: 4px;
+      font-family: "Amerigo";
+
+      background-color: #f2faff;
+
+      p {
+        color: #4c525a;
+        font-size: clamp(1.5rem, 2vw + 2rem, 3rem);
+
+        .green {
+          color: #2eb289;
+        }
+      }
+
+      button {
+        // align-self: center;
+        font-family: "BonsaiBody";
+        background-color: #00b289;
+        border: none;
+        border-radius: 4px;
+        padding: 0.8rem;
+        width: min(120px, 24rem);
+        text-transform: uppercase;
+        color: #ffffff;
+        // font-weight: 700;
+        font-size: clamp(0.8rem, 1vw, 1rem);
+        transition: all 0.2s ease-in-out;
+        box-shadow:
+          0 8px 18px rgba(0, 178, 137, 0.22),
+          0 3px 6px rgba(0, 0, 0, 0.08);
+
+        &:hover {
+          background-color: #008f70;
+          transform: scale(1.01);
+          box-shadow:
+            0 12px 25px rgba(0, 178, 137, 0.32),
+            0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        &:active {
+          transform: translateY(0);
+          box-shadow: 0 3px 8px rgba(0, 178, 137, 0.2);
+        }
+      }
+
+      @media (max-width: 420px) {
+        height: 100%;
+        flex-direction: column;
+        
+      }
+    }
+
+    &:last-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      width: 100%;
+      height: 100%;
+
+      background-color: lightcoral;
+
+      > p {
+        font-size: clamp(1rem, 0.636rem + 1.82vw, 2rem);
+      }
+
+      ul li {
+        width: 100%;
+
+        .list-div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
         }
       }
     }
