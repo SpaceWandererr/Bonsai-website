@@ -148,3 +148,48 @@ checkbox.addEventListener("change", () => {
     year.style.display = checkbox.checked ? "block" : "none";
   });
 });
+
+// SECTION-THREE-PART
+
+const listDiv = document.querySelectorAll(".list-div");
+const angleDown = document.querySelectorAll(".list-div-angle");
+
+listDiv.forEach((li) => {
+  li.addEventListener("click", () => {
+    const paraDiv = li.closest("li").querySelector(".para-div");
+    const angleDown = li.querySelector(".list-div-angle");
+
+    paraDiv.classList.toggle("showDiv");
+
+    angleDown.style.transform = paraDiv.classList.contains("showDiv")
+      ? "rotate(-180deg)"
+      : "rotate(0deg)";
+  });
+});
+
+// Footer section
+
+// Templates
+
+const templatesUl = document.querySelector(".templates > ul");
+
+const listItems = templatesUl.querySelectorAll(":scope > li");
+
+listItems.forEach((li) => {
+  li.addEventListener("click", () => {
+    const nestedUl = li.querySelector(":scope > ul");
+
+    if (nestedUl) {
+      nestedUl.classList.toggle("show-templates-ul");
+    }
+  });
+});
+
+//Bonsai
+
+const bonsaiParent = document.querySelector(".bonsai-ul");
+const bonsaiChild = document.querySelector(".bonsai-ul-child");
+
+bonsaiParent.addEventListener("click", () => {
+  bonsaiChild.classList.toggle("show-ul");
+});
