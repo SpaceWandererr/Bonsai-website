@@ -1142,7 +1142,6 @@ section {
   //  <!-- PRICE-CARD-SECTION -->
 
   .price-section {
-    // background-color: rgba(232, 227, 227, 0.808);
     padding: 1.5rem;
     margin-top: 3rem;
     width: 100%;
@@ -1172,7 +1171,8 @@ section {
       border: 0.3px solid rgba(2, 4, 69, 0.15);
 
       @media (max-width: 1000px) {
-        gap: 2rem;
+        gap: 1rem;
+        padding: 1rem;
       }
 
       div {

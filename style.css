@@ -959,7 +959,8 @@ section {
 }
 @media (max-width: 1000px) {
   .section-one .price-section .price-container {
-    gap: 2rem;
+    gap: 1rem;
+    padding: 1rem;
   }
 }
 .section-one .price-section .price-container div {
