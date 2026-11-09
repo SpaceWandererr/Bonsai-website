@@ -535,7 +535,7 @@ nav {
       }
 
       button {
-        padding: 0.6rem 1.5rem;
+        padding: 0.4rem 0.6rem;
         word-wrap: none;
         text-transform: uppercase;
         white-space: nowrap;
@@ -949,23 +949,26 @@ section {
   height: fit-content;
   padding: 8rem 0 0 0;
 
+  @media (max-width: 420px) {
+    width: 100%;
+    padding: 1rem;
+  }
+
   // <!-- PRICE-HEADING-SECTION -->
 
   .price-heading {
     display: flex;
-    // flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
-    padding: 0.5rem 0.8rem;
-    height: min(155px, 10vh);
+    flex-wrap: wrap;
+    gap: clamp(1rem, 4vw, 4rem);
+    padding: 1.5rem 1rem;
+    min-height: 155px;
+    height: auto;
     width: 100%;
     max-width: 1200px;
-    // background-color: #f1faff;
 
     h1 {
-      height: 100%;
-      // width: 30%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -976,19 +979,20 @@ section {
         sans-serif;
 
       white-space: nowrap;
-      font-size: clamp(1.5rem, 3vw + 2rem, 2.5rem);
+      font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+      margin: 0;
     }
 
     .toggle {
       width: auto;
-      height: 100%;
-      // background-color: forestgreen;
+      height: auto;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: clamp(0.5rem, 4vw, 3.5rem);
       padding: 0.8rem 0.4rem 0 0;
       position: relative;
+      flex-shrink: 0;
 
       .monthly {
         font-weight: 600;
@@ -996,6 +1000,7 @@ section {
         font-size: clamp(0.7rem, 2vw, 1rem);
         text-transform: uppercase;
         transition: color 0.3s ease;
+        white-space: nowrap;
       }
 
       .yearly-container {
@@ -1004,7 +1009,6 @@ section {
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
-        // background-color: red;
 
         .yearly {
           color: #626b66;
@@ -1034,7 +1038,6 @@ section {
         }
 
         .yearly {
-          // font-weight: 600;
           color: #00b289;
         }
       }
@@ -1045,12 +1048,12 @@ section {
         border-radius: 10em;
         box-shadow: 0px 0px 15px 2px #008f70;
         position: relative;
-        // padding: 0.2rem 0;
         background-color: #f2f7f4;
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        flex-shrink: 0;
 
         input {
           position: absolute;
@@ -1060,7 +1063,6 @@ section {
 
         input:checked ~ label {
           transform: translateX(1.7em);
-          // background: #a8b8b3;
         }
 
         input:checked ~ .switch-color {
@@ -1083,8 +1085,6 @@ section {
           width: 3rem;
           height: 1.4em;
           position: absolute;
-          // left: 0;
-          // top: 1em;
           background: #b8c9c1;
           border-radius: 10em;
           z-index: 1;
@@ -1093,32 +1093,50 @@ section {
       }
     }
 
-    @media (max-width: 420px) {
+    // TABLET RESPONSIVENESS
+    @media (max-width: 768px) {
       flex-direction: column;
-      height: fit-content;
+      height: auto;
+      min-height: auto;
       align-items: center;
       justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem 1rem;
 
-      gap: 2rem;
+      h1 {
+        font-size: clamp(1.7rem, 5vw, 2.2rem);
+      }
 
       .toggle {
-        // align-self: flex-end;
-        justify-content: flex-end;
-        padding-left: 0.5rem;
+        justify-content: center;
+        gap: clamp(1rem, 4vw, 2rem);
+      }
+    }
+
+    // MOBILE RESPONSIVENESS
+    @media (max-width: 420px) {
+      gap: 1.2rem;
+      padding: 1.5rem 0.5rem;
+
+      h1 {
+        font-size: clamp(1.5rem, 7vw, 1.9rem);
+      }
+
+      .toggle {
+        justify-content: center;
+        gap: 1rem;
+        padding: 0.8rem 0.4rem;
 
         .yearly-container {
           img {
-            top: -30px;
-            right: -40px;
+            width: 8rem;
+            height: 2.2rem;
+            top: -25px;
+            right: -35px;
           }
         }
       }
     }
-  }
-
-  @media (max-width: 420px) {
-    width: 100%;
-    padding: 1rem;
   }
 
   //  <!-- PRICE-CARD-SECTION -->
