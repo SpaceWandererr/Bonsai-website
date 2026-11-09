@@ -219,7 +219,7 @@ nav {
 
           // Product dropdown styles
           .bonsai-drop {
-            display: none;
+            display: block;
             flex-direction: column;
             position: absolute;
             top: 120%;
@@ -247,13 +247,18 @@ nav {
 
               span {
                 font-family: "Amerigo";
-                font-size: clamp(12px, 1vw + 0.9rem, 1rem);
+                /* Scales fluidly from 12px (0.75rem) to 24px (1.5rem) */
+                font-size: clamp(0.75rem, 2.5vw + 0.5rem, 1rem);
+
                 display: block;
                 font-weight: 900;
                 margin-bottom: 0.5rem;
               }
 
               p {
+                /* Scales fluidly from 14px (0.875rem) to 16px (1rem) for body readability */
+                font-size: clamp(0.875rem, 1vw + 0.6rem, .8rem);
+
                 width: 26ch;
                 white-space: wrap;
               }
