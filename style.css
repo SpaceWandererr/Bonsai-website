@@ -196,7 +196,7 @@ nav .link-container .links ul li:hover {
   }
 }
 nav .link-container .links ul li .bonsai-drop {
-  display: block;
+  display: none;
   flex-direction: column;
   position: absolute;
   top: 120%;

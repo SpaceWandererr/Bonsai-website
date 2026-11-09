@@ -219,7 +219,7 @@ nav {
 
           // Product dropdown styles
           .bonsai-drop {
-            display: block;
+            display: none;
             flex-direction: column;
             position: absolute;
             top: 120%;
@@ -257,7 +257,7 @@ nav {
 
               p {
                 /* Scales fluidly from 14px (0.875rem) to 16px (1rem) for body readability */
-                font-size: clamp(0.875rem, 1vw + 0.6rem, .8rem);
+                font-size: clamp(0.875rem, 1vw + 0.6rem, 0.8rem);
 
                 width: 26ch;
                 white-space: wrap;
