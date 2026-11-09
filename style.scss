@@ -237,10 +237,12 @@ nav {
             li {
               font-size: clamp(12px, 1vw + 0.2rem, 1rem);
               padding: 0.75rem;
+              border-radius: 4px;
+              transition: all 0.4s ease-in-out;
 
               &:hover {
                 background-color: #00b289;
-                border-radius: 4px;
+                color: #fff;
               }
 
               span {
